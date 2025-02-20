@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Particles from './components/Particles';
 import Contact from './components/Contact';
 
+// TODO: add CV and more visual elements
 function App() {
   return (
     <ThemeProvider>
