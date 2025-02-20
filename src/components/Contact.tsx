@@ -68,7 +68,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section className="py-20">
+    <section className="py-20" id="contact">
       <motion.div
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

@@ -38,7 +38,7 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <section className="py-20">
+    <section className="py-20" id="projects">
       <h2 className="text-[50px] md:text-[80px] mb-6 flex items-center">
         <SplitText
           text="My Projects"
