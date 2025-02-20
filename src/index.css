@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+    font-family: "Jost", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  img, video {
+    max-width: none !important;
+    height: auto !important;
+  }
+
+  body.light {
+    --bg: #f1f5f9;
+    --text: #101010;
+    --primary: #0F8AD2;
+    --secondary: #151515
+  }
+  
+  body.dark {
+    --bg: #101010;
+    --text: #f1f5f9;
+    --primary: #54AADE;
+    --secondary: #151515
+  }
+  

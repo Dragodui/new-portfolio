@@ -1,0 +1,32 @@
+# Ignore artifacts:
+build
+coverage
+node_modules
+
+# Ignore all HTML files:
+*.html
+
+# Ignore all CSS files:
+*.css
+
+# Ignore all JavaScript files:
+*.js
+
+# Ignore all map files:
+*.map
+
+# Ignore all JSON files:
+*.json
+
+# Ignore all log files:
+*.log
+
+# Ignore all markdown files:
+*.md
+
+# Ignore all images:
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
