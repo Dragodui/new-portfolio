@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import Particles from './components/Particles';
 import Contact from './components/Contact';
 
-// TODO: add CV and more visual elements
+// TODO: more visual elements and animations
 function App() {
   return (
     <ThemeProvider>
@@ -22,7 +22,7 @@ function App() {
       />
       <PageWrapper>
         <Header />
-        <main className='pb-[50px] md:pb-0'>
+        <main className="pb-[50px] md:pb-0">
           <Hero />
           <Features />
           <Contact />

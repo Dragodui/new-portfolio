@@ -1,13 +1,11 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { useTheme } from './ThemeContext';
 
 interface SkillGalleryProps {
   icons?: string[];
   className?: string;
-  containerSize?: number;
 }
 
 const getNonOverlappingPosition = (
@@ -59,12 +57,29 @@ const SkillGallery: React.FC<SkillGalleryProps> = ({
     'nodejs',
   ],
   className = '',
-  containerSize = 400,
 }) => {
   const positions: number[][] = [];
-  if (window.innerWidth < 768) {
-    containerSize = 350;
-  }
+
+  const [containerSize, setContainerSize] = useState(
+    window.innerWidth < 450 ? 350 : 400
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setContainerSize(350);
+      } else {
+        setContainerSize(400);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <div

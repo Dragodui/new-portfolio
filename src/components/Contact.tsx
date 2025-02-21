@@ -8,6 +8,7 @@ import TextArea from './ui/TextArea';
 import Button from './ui/Button';
 import { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
+import SocialMedias from './ui/SocialMedias';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState<{
@@ -24,7 +25,9 @@ const Contact: React.FC = () => {
   const [isSent, setIsSent] = useState(false); // Состояние для успешной отправки
   const [error, setError] = useState(''); // Состояние для ошибки
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -33,32 +36,32 @@ const Contact: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-  
+
     if (!formData.name || !formData.email || !formData.message) {
       setError('Please fill in all fields.');
       return;
     }
-  
+
     setIsLoading(true);
     setError('');
-  
+
     try {
       const serviceId = import.meta.env.VITE_SERVICE_ID;
       const templateId = import.meta.env.VITE_TEMPLATE_ID;
       const userId = import.meta.env.VITE_PUBLIC_KEY;
-        console.log(formData)
+      console.log(formData);
       const emailData = {
         from_name: formData.name,
         to_name: 'Aksandr Al-Ghazali',
         message: formData.message,
-        reply_to: formData.email, 
+        reply_to: formData.email,
         email: formData.email,
       };
-  
+
       await emailjs.send(serviceId, templateId, emailData, userId);
-  
+
       setIsSent(true);
-      setFormData({ name: '', email: '', message: '' }); 
+      setFormData({ name: '', email: '', message: '' });
     } catch (err) {
       setError('Something went wrong. Please try again.');
       console.error(err);
@@ -91,7 +94,15 @@ const Contact: React.FC = () => {
               rotationInterval={2000}
             />
           </h2>
-          <p className="text-xl">Have a question or want collaborate? Get in touch.</p>
+          <p className="text-2xl">
+            Have a question or want collaborate? Get in touch.
+          </p>
+          <p className="md:text-center text-xl text-primary mt-10 mb-2">
+            Or through my social medias
+          </p>
+          <div className="w-full flex md:justify-center mb-4">
+            <SocialMedias />
+          </div>
         </div>
         <form onSubmit={handleSubmit} className="md:w-1/2 flex flex-col gap-4">
           <Input
@@ -119,7 +130,9 @@ const Contact: React.FC = () => {
           <Button type="submit" disabled={isLoading}>
             {isLoading ? 'Sending...' : 'Send'}
           </Button>
-          {isSent && <p className="text-green-500">Message sent successfully!</p>}
+          {isSent && (
+            <p className="text-green-500">Message sent successfully!</p>
+          )}
           {error && <p className="text-red-500">{error}</p>}
         </form>
       </motion.div>

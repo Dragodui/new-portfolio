@@ -5,12 +5,13 @@ import { Cog, House, Mail } from 'lucide-react';
 
 const Header: React.FC = () => {
   return (
-    <header
-      className="z-30 max-w-7xl px-4 sm:px-6 lg:px-8 md:justify-start flex md:block fixed md:w-full justify-start bottom-[-10px] rounded-full md:top-[10px] md:bottom-[auto] right-1/2 translate-x-1/2"
-    >
-      <nav style={{
-        backdropFilter: 'blur(20px)',
-      }} className="inline-block border-[2px] bg-[rgba(0,0,0,0.1)] md:bg-transparent border-[#0F8AD2] px-10 rounded-xl md:rounded-full py-3">
+    <header className="z-30 max-w-7xl px-4 sm:px-6 lg:px-8 md:justify-start flex md:block fixed md:w-full justify-start bottom-[-10px] rounded-full md:top-[10px] md:bottom-[auto] right-1/2 translate-x-1/2">
+      <nav
+        style={{
+          backdropFilter: 'blur(20px)',
+        }}
+        className="inline-block border-[2px] bg-[rgba(0,0,0,0.1)] md:bg-transparent border-[#0F8AD2] px-10 rounded-xl md:rounded-full py-3"
+      >
         <motion.ul
           initial={{ x: 50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}

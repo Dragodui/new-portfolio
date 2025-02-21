@@ -48,7 +48,7 @@ const Projects: React.FC = () => {
           threshold={0.2}
           rootMargin="-50px"
         />
-        <motion.div
+        {/* <motion.div
           transition={{ duration: 1.15, delay: 0.5 }}
           animate={{
             rotate: [0, 360],
@@ -58,7 +58,7 @@ const Projects: React.FC = () => {
           }}
         >
           <Cog size={70} />
-        </motion.div>
+        </motion.div> */}
       </h2>
       <div className="flex flex-col">
         {projects.map((project, index) => (

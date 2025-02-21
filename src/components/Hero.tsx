@@ -6,31 +6,10 @@ import BlurText from './ui/BlurText';
 import SkillIcons from './SkillIcons';
 import Button from './ui/Button';
 import { Github, Instagram, Linkedin, Mail } from 'lucide-react';
+import cv from '../assets/Aksandr Al-Ghazali CV.pdf';
+import SocialMedias from './ui/SocialMedias';
 
 const Hero: React.FC = () => {
-  const mySocial = [
-    {
-      name: 'Github',
-      link: 'https://github.com/dragodui',
-      icon: <Linkedin size={40} />,
-    },
-    {
-      name: 'Linkedin',
-      link: 'https://linkedin.com/in/dragodui',
-      icon: <Github size={40} />,
-    },
-    {
-      name: 'Gmail',
-      link: 'alghazaliaks123@gmail.com',
-      icon: <Mail size={40} />,
-    },
-    {
-      name: 'Instagram',
-      link: 'https://instagram.com/dragodui',
-      icon: <Instagram size={40} />,
-    },
-  ];
-
   return (
     <section className="pt-10  md:pt-[180px]" id="home">
       <motion.div
@@ -60,29 +39,23 @@ const Hero: React.FC = () => {
               ></BlurText>
             </h1>
             <div className="flex items-center gap-3 flex-wrap">
-              <Button>Download my CV</Button>
-              <div className="flex items-center gap-3 ">
-                {mySocial.map((social, index) => {
-                  return (
-                    <motion.a
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.4 }}
-                      key={index}
-                      href={
-                        social.name === 'Gmail'
-                          ? `mailto:${social.link}`
-                          : social.link
-                      }
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-2xl text-primary hover:text-primary-dark bg-secondary p-3 rounded-xl hover:scale-110 transition-transform duration-300"
-                    >
-                      {social.icon}
-                    </motion.a>
-                  );
-                })}
-              </div>
+              <motion.a
+                download
+                href={cv}
+                className={`group relative overflow-hidden bg-transparent border-[2px] border-primary px-7 py-3 text-2xl rounded-full`}
+                style={{
+                  backdropFilter: 'blur(20px)',
+                }}
+              >
+                {/* Background overlay */}
+                <span className="absolute bottom-0 left-0 w-full h-0 bg-primary transition-all duration-500 ease-in-out group-hover:h-full z-0"></span>
+
+                {/* Text content */}
+                <span className="relative z-10 hover:text-bg duration-500">
+                  Download my CV
+                </span>
+              </motion.a>
+              <SocialMedias />
             </div>
           </div>
           <SkillIcons />
