@@ -13,7 +13,7 @@ const getNonOverlappingPosition = (
   size: number,
   iconSize: number,
   minSpacing = 20,
-  maxAttempts = 800
+  maxAttempts = 1500
 ) => {
   let attempts = 0;
   while (attempts < maxAttempts) {

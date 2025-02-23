@@ -3,6 +3,7 @@
 import type React from 'react';
 import { motion } from 'framer-motion';
 import SplitText from './ui/SplitText';
+import { GitBranch, Github } from 'lucide-react';
 
 const Projects: React.FC = () => {
   const projects = [
@@ -81,6 +82,20 @@ const Projects: React.FC = () => {
             <div className="w-full h-[3px] bg-primary transition-colors duration-300 group-hover:bg-text" />
           </motion.a>
         ))}
+         <motion.a
+                href='https://github.com/Dragodui'
+                className={`group relative mt-6 justify-center overflow-hidden bg-transparent border-[2px] border-primary px-7 py-3 text-2xl rounded-full`}
+                style={{
+                  backdropFilter: 'blur(20px)',
+                }}
+              >
+                {/* Background overlay */}
+                <span className="absolute bottom-0 left-0 w-full h-0 bg-primary transition-all duration-500 ease-in-out group-hover:h-full z-0"></span>
+
+                <span className="relative justify-center text-center w-full z-10 hover:text-bg duration-50 flex items-center gap-2">
+                  <p>More on my GitHub</p> <Github size={28}/>
+                </span>
+              </motion.a>
       </div>
     </section>
   );
