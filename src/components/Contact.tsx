@@ -97,12 +97,14 @@ const Contact: React.FC = () => {
           <p className="text-2xl">
             Have a question or want collaborate? Get in touch.
           </p>
-          <p className="md:text-center text-xl text-primary mt-10 mb-2">
-            Or through my social medias
-          </p>
-          <div className="w-full flex md:justify-center mb-4">
-            <SocialMedias />
-          </div>
+        <div className='mt-10 mb-4'>
+          <p className="md:text-center text-xl text-primary mb-2">
+              Or through my social medias
+            </p>
+            <div className="w-full flex md:justify-center">
+              <SocialMedias />
+            </div>
+        </div>
         </div>
         <form onSubmit={handleSubmit} className="md:w-1/2 flex flex-col gap-4">
           <Input
