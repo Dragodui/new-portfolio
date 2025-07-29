@@ -4,8 +4,6 @@ import type React from 'react';
 import { motion } from 'framer-motion';
 import BlurText from './ui/BlurText';
 import SkillIcons from './SkillIcons';
-import Button from './ui/Button';
-import { Github, Instagram, Linkedin, Mail } from 'lucide-react';
 import cv from '../assets/Aksandr Al-Ghazali CV.pdf';
 import SocialMedias from './ui/SocialMedias';
 
@@ -34,7 +32,7 @@ const Hero: React.FC = () => {
               </motion.span>{' '}
               I`m Aksandr Al-Ghazali <br />
               <BlurText
-                text="Full Stack Developer"
+                text="Software Engineer"
                 className="font-bold text-[64px] md:text-[80px] text-primary"
               ></BlurText>
             </h1>
