@@ -16,7 +16,7 @@ const SocialMedias: FC<SocialMediasProps> = ({ className, iconSize = 40 }) => {
     },
     {
       name: 'Linkedin',
-      link: 'https://linkedin.com/in/dragodui',
+      link: 'https://www.linkedin.com/in/aksandr-al-ghazali/',
       icon: <Linkedin size={iconSize} />,
     },
     {
