@@ -12,12 +12,12 @@ const SocialMedias: FC<SocialMediasProps> = ({ className, iconSize = 40 }) => {
     {
       name: 'Github',
       link: 'https://github.com/dragodui',
-      icon: <Linkedin size={iconSize} />,
+      icon: <Github size={iconSize} />,
     },
     {
       name: 'Linkedin',
       link: 'https://linkedin.com/in/dragodui',
-      icon: <Github size={iconSize} />,
+      icon: <Linkedin size={iconSize} />,
     },
     {
       name: 'Gmail',
