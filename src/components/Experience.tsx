@@ -64,7 +64,7 @@ const Experience: React.FC = () => {
               ))}
             </ul>
             
-            <div className="w-full h-[3px] bg-primary transition-colors duration-300 group-hover:bg-text" />
+            {/* <div className="w-full h-[3px] bg-primary transition-colors duration-300 group-hover:bg-text" /> */}
           </motion.div>
         ))}
         
