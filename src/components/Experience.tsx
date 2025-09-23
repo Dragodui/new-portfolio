@@ -36,7 +36,7 @@ const Experience: React.FC = () => {
         {experiences.map((experience, index) => (
           <motion.div
             key={index}
-            className="bg-bg py-6 rounded-lg group"
+            className="py-6 rounded-lg group"
             initial={{ opacity: 0, scale: 1, x: -1000 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.5, delay: index * 0.3 }}
