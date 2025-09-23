@@ -6,7 +6,7 @@ import RotatingText from './ui/RoatingText';
 import Input from './ui/Input';
 import TextArea from './ui/TextArea';
 import Button from './ui/Button';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import emailjs from 'emailjs-com';
 import SocialMedias from './ui/SocialMedias';
 
@@ -21,9 +21,9 @@ const Contact: React.FC = () => {
     message: '',
   });
 
-  const [isLoading, setIsLoading] = useState(false); // Состояние для индикации загрузки
-  const [isSent, setIsSent] = useState(false); // Состояние для успешной отправки
-  const [error, setError] = useState(''); // Состояние для ошибки
+  const [isLoading, setIsLoading] = useState(false); 
+  const [isSent, setIsSent] = useState(false);
+  const [error, setError] = useState(''); 
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>

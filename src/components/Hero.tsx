@@ -4,7 +4,7 @@ import type React from 'react';
 import { motion } from 'framer-motion';
 import BlurText from './ui/BlurText';
 import SkillIcons from './SkillIcons';
-import cv from '../assets/Aksandr Al-Ghazali CV.pdf';
+import cv from '../assets/cv-aksandr-al-ghazali.pdf';
 import SocialMedias from './ui/SocialMedias';
 
 const Hero: React.FC = () => {

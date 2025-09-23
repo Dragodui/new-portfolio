@@ -1,12 +1,22 @@
-'use client';
-
 import type React from 'react';
 import { motion } from 'framer-motion';
 import SplitText from './ui/SplitText';
-import { GitBranch, Github } from 'lucide-react';
+import { Github } from 'lucide-react';
 
 const Projects: React.FC = () => {
   const projects = [
+    {
+      name: 'Household Manager API',
+      description: 'Backend server for household management app with user authentication, expense tracking, and task management. Built with Go, Postgres, Docker and Redis.',
+      github: 'https://github.com/Dragodui/diploma-server',
+      demo: 'https://db-schemas-generator.vercel.app/',
+    },
+    {
+      name: 'DB Schemas Generator',
+      description: 'Visualize MySQL/PostgreSQL database schemas using interactive diagrams. Frontend built with Next.js and React Flow, backend with NestJS for schema metadata processing.',
+      github: 'https://github.com/Dragodui/db-schemas-generator',
+      demo: '',
+    },
     {
       name: 'Music Player',
       description:
@@ -19,20 +29,6 @@ const Projects: React.FC = () => {
       description:
         'Delivery app built with React and Express using JavaScript and TailwindCSS.',
       github: 'https://github.com/Dragodui/delivery-app',
-      demo: '',
-    },
-    {
-      name: 'Weather App',
-      description:
-        'Weather app build with React using TypeScript, TailwindCSS and open weather API.',
-      github: 'https://github.com/Dragodui/weather-app',
-      demo: 'https://dragodui-weather-app.netlify.app/',
-    },
-    {
-      name: 'Currency Converter',
-      description:
-        'Currency converter app build with React using JavaScript, SCSS and floatrates API.',
-      github: 'https://github.com/Dragodui/currency-converter-on-React',
       demo: '',
     },
   ];
@@ -63,7 +59,7 @@ const Projects: React.FC = () => {
       <div className="flex flex-col">
         {projects.map((project, index) => (
           <motion.a
-            key={index}
+            key={project.demo}
             target="_blank"
             href={project.github}
             className="bg-bg py-6 rounded-lg group"
