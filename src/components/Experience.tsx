@@ -8,7 +8,7 @@ const Experience: React.FC = () => {
     {
       company: 'Seomood',
       position: 'Software Developer | NodeJS & Go',
-      period: 'Sep 2023 - Present',
+      period: 'Sep 2022 - Present',
       location: 'Szczecin, Poland',
       achievements: [
         'Engineered scalable web applications using TypeScript, NestJS, Express, and Go, reducing load times by 40% and improving user engagement by 25%',
