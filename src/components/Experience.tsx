@@ -30,6 +30,7 @@ const Experience: React.FC = () => {
           animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
           threshold={0.2}
           rootMargin="-50px"
+          textAlign='left'
         />
       </h2>
       <div className="flex flex-col">
