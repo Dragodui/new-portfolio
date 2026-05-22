@@ -6,29 +6,27 @@ import { Github } from 'lucide-react';
 const Projects: React.FC = () => {
   const projects = [
     {
-      name: 'Household Manager API',
-      description: 'Backend server for household management app with user authentication, expense tracking, and task management. Built with Go, Postgres, Docker and Redis.',
-      github: 'https://github.com/Dragodui/diploma-server',
-      demo: 'https://db-schemas-generator.vercel.app/',
+      name: 'My Deploy',
+      description: 'Deployment tooling and CI/CD scripts for personal projects.',
+      github: 'https://github.com/Dragodui/my-deploy',
+      demo: '',
+    },
+    {
+      name: 'Home App',
+      description: 'Home automation frontend and backend for device control and monitoring.',
+      github: 'https://github.com/Dragodui/home-app',
+      demo: '',
+    },
+    {
+      name: 'PC Controll',
+      description: 'Remote PC control utilities and automation scripts.',
+      github: 'https://github.com/Dragodui/pc-controll',
+      demo: '',
     },
     {
       name: 'DB Schemas Generator',
-      description: 'Visualize MySQL/PostgreSQL database schemas using interactive diagrams. Frontend built with Next.js and React Flow, backend with NestJS for schema metadata processing.',
+      description: 'Visualize MySQL/PostgreSQL database schemas using interactive diagrams.',
       github: 'https://github.com/Dragodui/db-schemas-generator',
-      demo: '',
-    },
-    {
-      name: 'Music Player',
-      description:
-        'Music player built with React and Electron using TypeScript and TailwindCSS.',
-      github: 'https://github.com/Dragodui/electron-player',
-      demo: '',
-    },
-    {
-      name: 'Delivery App',
-      description:
-        'Delivery app built with React and Express using JavaScript and TailwindCSS.',
-      github: 'https://github.com/Dragodui/delivery-app',
       demo: '',
     },
   ];

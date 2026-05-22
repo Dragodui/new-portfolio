@@ -42,6 +42,8 @@ const SkillGallery: React.FC<SkillGalleryProps> = ({
     'javascript',
     'go',
     'python',
+    'c',
+    'cpp',
     'expressjs',
     'nestjs',
     'react',
