@@ -10,7 +10,7 @@ const Header: React.FC = () => {
         style={{
           backdropFilter: 'blur(20px)',
         }}
-        className="inline-block border-[2px] bg-[rgba(0,0,0,0.1)] md:bg-transparent border-[rgb(0,0,0,0.4)] px-10 rounded-sm md:rounded-lg py-3"
+        className="inline-block border-[2px] bg-[rgba(0,0,0,0.1)] md:bg-transparent border-[rgb(0,0,0,0.4)] px-7 rounded-lg md:rounded-lg p-3"
       >
         <motion.ul
           initial={{ x: 50, opacity: 0 }}

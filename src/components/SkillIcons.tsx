@@ -8,42 +8,12 @@ interface SkillGalleryProps {
   className?: string;
 }
 
-const getNonOverlappingPosition = (
-  existingPositions: number[][],
-  size: number,
-  iconSize: number,
-  minSpacing = 20,
-  maxAttempts = 1500
-) => {
-  let attempts = 0;
-  while (attempts < maxAttempts) {
-    const x = Math.random() * (size - iconSize);
-    const y = Math.random() * (size - iconSize);
-
-    const overlapping = existingPositions.some(([ex, ey, es]) => {
-      const distance = Math.sqrt((x - ex) ** 2 + (y - ey) ** 2);
-      return distance < (iconSize + es) / 2 + minSpacing;
-    });
-
-    if (!overlapping) return [x, y];
-    attempts++;
-  }
-
-  return [Math.random() * (size - iconSize), Math.random() * (size - iconSize)];
-};
-
-const getRandomSize = () => {
-  return Math.random() * 20 + 50;
-};
-
 const SkillGallery: React.FC<SkillGalleryProps> = ({
   icons = [
     'typescript',
     'javascript',
     'go',
     'python',
-    'c',
-    'cpp',
     'expressjs',
     'nestjs',
     'react',
@@ -57,9 +27,7 @@ const SkillGallery: React.FC<SkillGalleryProps> = ({
     'git',
     'docker',
   ],
-  className = '',
 }) => {
-  const positions: number[][] = [];
 
   const [containerSize, setContainerSize] = useState(
     window.innerWidth < 450 ? 350 : 400
@@ -84,34 +52,20 @@ const SkillGallery: React.FC<SkillGalleryProps> = ({
 
   return (
     <div
-      className={`relative mx-auto overflow-hidden rounded-lg ${className}`}
+      className="flex flex-wrap content-start items-start gap-2 rounded-lg"
       style={{ height: containerSize, width: containerSize }}
     >
       {icons.map((icon, index) => {
-        const size = getRandomSize();
-        const [x, y] = getNonOverlappingPosition(
-          positions,
-          containerSize,
-          size,
-          20
-        );
-        positions.push([x, y, size]);
-
         return (
+    
           <motion.img
             key={index}
             src={`https://skillicons.dev/icons?i=${icon}&theme=dark`}
             alt={icon}
-            className="absolute"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            style={{
-              width: size,
-              height: size,
-              top: y,
-              left: x,
-            }}
+            className="block aspect-square w-[80px]"
           />
         );
       })}
