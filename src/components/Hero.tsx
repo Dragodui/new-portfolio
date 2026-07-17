@@ -33,9 +33,12 @@ const Hero: React.FC = () => {
               I`m Aksandr Al-Ghazali <br />
               <BlurText
                 text="Software Engineer"
-                className="font-bold text-[64px] md:text-[80px] text-text"
+                className="font-bold text-[64px] md:text-[90px] text-text"
               ></BlurText>
             </h1>
+            <div className="mb-8">
+              <SkillIcons />
+            </div>
             <div className="flex items-center gap-3 flex-wrap">
               <motion.a
                 download
@@ -56,7 +59,6 @@ const Hero: React.FC = () => {
               <SocialMedias />
             </div>
           </div>
-          <SkillIcons />
         </div>
       </motion.div>
     </section>

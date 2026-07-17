@@ -5,12 +5,12 @@ import { Cog, House, Mail } from 'lucide-react';
 
 const Header: React.FC = () => {
   return (
-    <header className="z-30 max-w-7xl px-4 sm:px-6 lg:px-8 md:justify-start flex md:block fixed md:w-full justify-start bottom-[-10px] md:top-[10px] md:bottom-[auto] right-1/2 translate-x-1/2">
+    <header className="z-30 max-w-7xl px-4 sm:px-6 lg:px-8 md:justify-start flex md:block fixed md:w-full justify-start bottom-[10px] md:top-[10px] md:bottom-[auto] right-1/2 translate-x-1/2">
       <nav
         style={{
           backdropFilter: 'blur(20px)',
         }}
-        className="inline-block border-[2px] bg-[rgba(0,0,0,0.1)] md:bg-transparent border-[rgb(0,0,0,0.4)] px-7 rounded-lg md:rounded-lg p-3"
+        className="inline-block border-[2px] bg-[rgba(0,0,0,0.1)] md:bg-transparent border-text px-7 rounded-lg md:rounded-lg p-3"
       >
         <motion.ul
           initial={{ x: 50, opacity: 0 }}
@@ -21,7 +21,7 @@ const Header: React.FC = () => {
           <li>
             <a href="#home" className="text-lg md:text-2xl text-center">
               <span className="flex justify-center md:hidden">
-                <House />
+                <House  />
               </span>
               <p>Home</p>
             </a>

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 interface SkillGalleryProps {
@@ -28,33 +28,8 @@ const SkillGallery: React.FC<SkillGalleryProps> = ({
     'docker',
   ],
 }) => {
-
-  const [containerSize, setContainerSize] = useState(
-    window.innerWidth < 450 ? 350 : 400
-  );
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 768) {
-        setContainerSize(350);
-      } else {
-        setContainerSize(400);
-      }
-    };
-
-    window.addEventListener('resize', handleResize);
-    handleResize();
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
   return (
-    <div
-      className="flex flex-wrap content-start items-start gap-2 rounded-lg"
-      style={{ height: containerSize, width: containerSize }}
-    >
+    <div className="flex w-full flex-wrap items-start gap-2 rounded-lg md:flex-nowrap">
       {icons.map((icon, index) => {
         return (
     
@@ -65,7 +40,7 @@ const SkillGallery: React.FC<SkillGalleryProps> = ({
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="block aspect-square w-[80px]"
+            className="block aspect-square w-[40px] shrink-0 md:w-[50px]"
           />
         );
       })}

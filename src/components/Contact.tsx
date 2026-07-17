@@ -112,7 +112,7 @@ const Contact: React.FC = () => {
             name="name"
             type="text"
             placeholder="Your Name"
-            className="w-full border-[rgba(0,0,0,0.4)]"
+            className="w-full border-text"
             value={formData.name}
           />
           <Input
@@ -120,14 +120,14 @@ const Contact: React.FC = () => {
             name="email"
             type="email"
             placeholder="Your Email"
-            className="w-full border-[rgba(0,0,0,0.4)]"
+            className="w-full border-text"
             value={formData.email}
           />
           <TextArea
             onChange={handleChange}
             name="message"
             placeholder="Your Message"
-            className="w-full border-[rgba(0,0,0,0.4)]"
+            className="w-full border-text"
             value={formData.message}
           />
           <Button type="submit" disabled={isLoading}>
