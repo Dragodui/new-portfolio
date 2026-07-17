@@ -33,20 +33,20 @@ const Hero: React.FC = () => {
               I`m Aksandr Al-Ghazali <br />
               <BlurText
                 text="Software Engineer"
-                className="font-bold text-[64px] md:text-[80px] text-primary"
+                className="font-bold text-[64px] md:text-[80px] text-text"
               ></BlurText>
             </h1>
             <div className="flex items-center gap-3 flex-wrap">
               <motion.a
                 download
                 href={cv}
-                className={`group relative overflow-hidden bg-transparent border-[2px] border-primary px-7 py-3 text-2xl rounded-full`}
+                className={`group relative overflow-hidden bg-transparent border-[2px] border-text px-7 py-3 text-2xl rounded-lg`}
                 style={{
                   backdropFilter: 'blur(20px)',
                 }}
               >
                 {/* Background overlay */}
-                <span className="absolute bottom-0 left-0 w-full h-0 bg-primary transition-all duration-500 ease-in-out group-hover:h-full z-0"></span>
+                <span className="absolute bottom-0 left-0 w-full h-0 bg-text transition-all duration-500 ease-in-out group-hover:h-full z-0"></span>
 
                 {/* Text content */}
                 <span className="relative z-10 hover:text-bg duration-500">

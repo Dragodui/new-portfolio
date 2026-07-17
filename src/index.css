@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 #root {
-    font-family: "Jost", serif;
+    font-family: "Inconsolata", serif;
 }
 
 * {
@@ -19,16 +19,16 @@
   }
 
   body.light {
-    --bg: #f1f5f9;
+    --bg: #ffffff;
     --text: #101010;
-    --primary: #0F8AD2;
+    --primary: #101010;
     --secondary: #151515
   }
   
   body.dark {
     --bg: #101010;
     --text: #f1f5f9;
-    --primary: #54AADE;
+    --primary: #101010;
     --secondary: #151515
   }
   

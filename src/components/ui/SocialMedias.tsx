@@ -12,22 +12,22 @@ const SocialMedias: FC<SocialMediasProps> = ({ className, iconSize = 40 }) => {
     {
       name: 'Github',
       link: 'https://github.com/dragodui',
-      icon: <Github size={iconSize} />,
+      icon: <Github strokeWidth={1.5} size={iconSize} />,
     },
     {
       name: 'Linkedin',
       link: 'https://www.linkedin.com/in/aksandr-al-ghazali/',
-      icon: <Linkedin size={iconSize} />,
+      icon: <Linkedin strokeWidth={1.5} size={iconSize} />,
     },
     {
       name: 'Gmail',
       link: 'alghazaliaks123@gmail.com',
-      icon: <Mail size={iconSize} />,
+      icon: <Mail strokeWidth={1.5}  size={iconSize} />,
     },
     {
       name: 'Instagram',
       link: 'https://instagram.com/dragodui',
-      icon: <Instagram size={iconSize} />,
+      icon: <Instagram strokeWidth={1.5} size={iconSize} />,
     },
   ];
   return (
@@ -44,7 +44,7 @@ const SocialMedias: FC<SocialMediasProps> = ({ className, iconSize = 40 }) => {
             }
             target="_blank"
             rel="noreferrer"
-            className="text-2xl text-primary hover:text-primary-dark bg-secondary p-3 rounded-xl hover:scale-110 transition-transform duration-300"
+            className="text-2xl text-text hover:text-text-dark bg-secondary p-3 rounded-xl hover:scale-110 transition-transform duration-300"
           >
             {social.icon}
           </motion.a>

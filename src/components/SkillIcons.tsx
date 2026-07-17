@@ -102,7 +102,7 @@ const SkillGallery: React.FC<SkillGalleryProps> = ({
             key={index}
             src={`https://skillicons.dev/icons?i=${icon}&theme=dark`}
             alt={icon}
-            className="absolute rounded-full"
+            className="absolute"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}

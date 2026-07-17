@@ -22,7 +22,7 @@ const Experience: React.FC = () => {
 
   return (
     <section className="pt-10 md:py-20" id="experience">
-      <h2 className="text-[50px] md:text-[80px] mb-6 flex items-center">
+      <h2 className="text-[50px] md:text-[60px] mb-6 flex items-center">
         <SplitText
           text="Work Experience"
           delay={150}
@@ -43,7 +43,7 @@ const Experience: React.FC = () => {
             transition={{ duration: 0.5, delay: index * 0.3 }}
           >
             <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
-              <h3 className="text-[32px] md:text-[60px] leading-[44px] flex items-center gap-4">
+              <h3 className="text-[32px] md:text-[40px] leading-[44px] flex items-center gap-4">
                 {experience.company}
               
               </h3>
@@ -53,13 +53,13 @@ const Experience: React.FC = () => {
               </div>
             </div>
             
-            <p className="text-primary text-[18px] md:text-[24px] mb-4">{experience.position}</p>
+            <p className="text-text text-[18px] md:text-[20px] mb-4">{experience.position}</p>
             <p className="text-text text-[14px] md:text-[16px] mb-4">{experience.location}</p>
             
             <ul className="text-text text-[14px] md:text-[18px] mb-5 space-y-2">
               {experience.achievements.map((achievement, idx) => (
                 <li key={idx} className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
+                  <span className="text-text mr-2">•</span>
                   {achievement}
                 </li>
               ))}
@@ -71,13 +71,13 @@ const Experience: React.FC = () => {
         
         <motion.a
                 href='#contact'
-                className={`group relative mt-6 justify-center overflow-hidden bg-transparent border-[2px] border-primary px-7 py-3 text-2xl rounded-full`}
+                className={`group relative mt-6 justify-center overflow-hidden bg-transparent border-[2px] border-text px-7 py-3 text-2xl rounded-lg`}
                 style={{
                   backdropFilter: 'blur(20px)',
                 }}
               >
                 {/* Background overlay */}
-                <span className="absolute bottom-0 left-0 w-full h-0 bg-primary transition-all duration-500 ease-in-out group-hover:h-full z-0"></span>
+                <span className="absolute bottom-0 left-0 w-full h-0 bg-text transition-all duration-500 ease-in-out group-hover:h-full z-0"></span>
 
                 <span className="relative justify-center text-center w-full z-10 hover:text-bg duration-50 flex items-center gap-2">
                   <p>Get in touch</p> <ExternalLink/>

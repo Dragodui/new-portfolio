@@ -98,7 +98,7 @@ const Contact: React.FC = () => {
             Have a question or want collaborate? Get in touch.
           </p>
         <div className='mt-10 mb-4'>
-          <p className="md:text-center text-xl text-primary mb-2">
+          <p className="md:text-center text-xl text-text mb-2">
               Or through my social medias
             </p>
             <div className="w-full flex md:justify-center">
@@ -112,7 +112,7 @@ const Contact: React.FC = () => {
             name="name"
             type="text"
             placeholder="Your Name"
-            className="w-full"
+            className="w-full border-[rgba(0,0,0,0.4)]"
             value={formData.name}
           />
           <Input
@@ -120,13 +120,14 @@ const Contact: React.FC = () => {
             name="email"
             type="email"
             placeholder="Your Email"
-            className="w-full"
+            className="w-full border-[rgba(0,0,0,0.4)]"
             value={formData.email}
           />
           <TextArea
             onChange={handleChange}
             name="message"
             placeholder="Your Message"
+            className="w-full border-[rgba(0,0,0,0.4)]"
             value={formData.message}
           />
           <Button type="submit" disabled={isLoading}>

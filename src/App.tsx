@@ -10,7 +10,7 @@ import Experience from './components/Experience';
 function App() {
   return (
     <ThemeProvider>
-      <Particles
+      {/* <Particles
         particleCount={200}
         particleSpread={10}
         speed={0.1}
@@ -18,7 +18,7 @@ function App() {
         moveParticlesOnHover={false}
         alphaParticles={false}
         disableRotation={false}
-      />
+      /> */}
       <PageWrapper>
         <Header />
         <main className="pb-[50px] md:pb-0">

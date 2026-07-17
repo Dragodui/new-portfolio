@@ -33,7 +33,7 @@ const Projects: React.FC = () => {
 
   return (
     <section className=" pt-10 md:py-20" id="projects">
-      <h2 className="text-[50px] md:text-[80px] mb-6 flex items-center">
+      <h2 className="text-[50px] md:text-[60px] mb-6 flex items-center">
         <SplitText
           text="My Projects"
           delay={150}
@@ -65,26 +65,26 @@ const Projects: React.FC = () => {
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.5, delay: index * 0.3 }}
           >
-            <h3 className="text-[32px] md:text-[60px] leading-[44px] flex items-center gap-4">
+            <h3 className="text-[32px] md:text-[45px] leading-[44px] flex items-center gap-4">
               <p>{project.name}</p>
               {/* <MoveRight
              size={70}
-             className="transition-transform text-text duration-300 group-hover:translate-x-4 group-hover:text-primary"
+             className="transition-transform text-text duration-300 group-hover:translate-x-4 group-hover:text-text"
            /> */}
             </h3>
             <p className="text-text text-[14px] md:text-[20px] mb-5">{project.description}</p>
-            <div className="w-full h-[3px] bg-primary transition-colors duration-300 group-hover:bg-text" />
+            <div className="w-full h-[3px] bg-text transition-colors duration-300 group-hover:bg-text" />
           </motion.a>
         ))}
          <motion.a
                 href='https://github.com/Dragodui'
-                className={`group relative mt-6 justify-center overflow-hidden bg-transparent border-[2px] border-primary px-7 py-3 text-2xl rounded-full`}
+                className={`group relative mt-6 justify-center overflow-hidden bg-transparent border-[2px] border-text px-7 py-3 text-2xl rounded-lg`}
                 style={{
                   backdropFilter: 'blur(20px)',
                 }}
               >
                 {/* Background overlay */}
-                <span className="absolute bottom-0 left-0 w-full h-0 bg-primary transition-all duration-500 ease-in-out group-hover:h-full z-0"></span>
+                <span className="absolute bottom-0 left-0 w-full h-0 bg-text transition-all duration-500 ease-in-out group-hover:h-full z-0"></span>
 
                 <span className="relative justify-center text-center w-full z-10 hover:text-bg duration-50 flex items-center gap-2">
                   <p>More on my GitHub</p> <Github size={28}/>
